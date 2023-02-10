@@ -1,0 +1,52 @@
+{
+  "name": "exalla",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/http/server.ts",
+    "seed": "ts-node-dev -r tsconfig-paths/register src/database/seed/index.ts",
+    "typeorm": "typeorm-ts-node-commonjs",
+    "generate": "npx plop --plopfile ./generators/default/plopfile.js",
+    "generate:admin": "npx plop --plopfile ./generators/admin/plopfile.js"
+  },
+  "dependencies": {
+    "axios": "^1.2.0",
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "google-auth-library": "^8.7.0",
+    "jsonwebtoken": "^9.0.0",
+    "knex": "^2.3.0",
+    "maxipago-sdk-js": "^1.0.3",
+    "metriker": "^1.0.7",
+    "mssql": "^7.3.5",
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.7.0",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/bcrypt": "^5.0.0",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.14",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "eslint": "^8.19.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.2.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-import-helpers": "^1.2.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "plop": "^3.1.1",
+    "prettier": "^2.7.1",
+    "ts-jest": "^28.0.8",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.8.2"
+  }
+}

@@ -1,0 +1,19 @@
+import { Request, Response } from 'express';
+import { container } from 'tsyringe';
+
+import { {{ pascalCase name }}{{ pascalCase useCase }}UseCase } from './{{ pascalCase name }}{{ pascalCase useCase }}UseCase';
+
+export class {{ pascalCase name }}{{ pascalCase useCase }}Controller {
+  async handle(request: Request, response: Response): Promise<Response> {
+
+    const {{ camelCase name }}{{ pascalCase useCase }}UseCase = container.resolve(
+      {{ pascalCase name }}{{ pascalCase useCase }}UseCase
+    );
+
+    const data = await {{ camelCase name }}{{ pascalCase useCase }}UseCase.execute({
+      value: undefined,
+    });
+
+    return response.json(data);
+  }
+}
