@@ -4,11 +4,11 @@ export const connection = knex({
   client: 'mssql',
   debug: true,
   connection: {
-    host: 'DAGSRV06',
+    host: 'host',
     port: 1433,
-    user: 'ecommerce_exalla',
-    password: 'Exalla@2022',
-    database: 'ecommerce_exalla_dev',
+    user: 'ecommerce',
+    password: 'password',
+    database: 'database',
     options: {
       trustedConnection: true,
       encrypt: true,
